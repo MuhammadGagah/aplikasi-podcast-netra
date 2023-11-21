@@ -1,0 +1,7 @@
+{
+  "name": "form-podcast",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
