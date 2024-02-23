@@ -1,8 +1,8 @@
 {
-  "name": "form-podcast",
+  "name": "podcastnetra",
   "version": "0.0.1",
-  "author": "Ionic Framework",
-  "homepage": "https://ionicframework.com/",
+  "author": "Muhammad Gagah",
+  "homepage": "blog.mgagah.my.id",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -21,6 +21,7 @@
     "@angular/platform-browser": "^17.0.2",
     "@angular/platform-browser-dynamic": "^17.0.2",
     "@angular/router": "^17.0.2",
+    "@capacitor/android": "5.5.1",
     "@capacitor/app": "5.0.6",
     "@capacitor/core": "5.5.1",
     "@capacitor/haptics": "5.0.6",
@@ -61,5 +62,5 @@
     "ts-node": "^8.3.0",
     "typescript": "~5.2.2"
   },
-  "description": "An Ionic project"
+  "description": "Ini adalah aplikasi podcast netra, yang digunakan untuk mendengarkan serta mengisi podcast netra. Aplikasi ini menggunakan spotify for podcaster sebagai tempat database disimpan."
 }

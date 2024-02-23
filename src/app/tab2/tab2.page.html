@@ -1,17 +1,95 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 2
+      Podcast Netra Host Registration Form
     </ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button>Kembali</ion-back-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 2</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <app-explore-container name="Tab 2 page"></app-explore-container>
+<ion-content padding>
+  <ion-card class="welcome-card bg-content">
+    <ion-card-header>
+      <ion-card-title color="primary">Formulir Pendaftaran Host Podcast Netra</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>Silakan isi form berikut untuk menjadi host, atau mengirimkan kontenmu ke podcast netra.</p>
+      <p>Harap perhatikan dan isi data dengan teliti. Karena jika sudah di-submit, data yang salah tidak dapat
+        diperbaiki kecuali oleh admin.</p>
+      <ion-list>
+        <ion-item>
+          <ion-input type="text" [(ngModel)]="nama" label="Nama Lengkap" labelPlacement="floating"
+            placeholder="Masukkan nama lengkapmu" required="true"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input type="number" [(ngModel)]="nohp" label="Nomor HP" labelPlacement="floating"
+            placeholder="Isi nomor HP/WA yang masih aktif" required="true"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-select [(ngModel)]="jenis_kelamin" label="Jenis Kelamin" labelPlacement="floating"
+            placeholder="Pilih jenis kelamin" required="true">
+            <ion-select-option value="Laki-laki">Laki-laki</ion-select-option>
+            <ion-select-option value="Perempuan">Perempuan</ion-select-option>
+          </ion-select>
+        </ion-item>
+        <ion-item>
+          <ion-input type="date" [(ngModel)]="tgl_lahir" label=" Tanggal Lahir " labelPlacement="floating"
+            placeholder="Isikan tanggal lahir kamu" required="true"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input type="text" [(ngModel)]="pekerjaan" label=" Pekerjaan " labelPlacement="floating"
+            placeholder="Tuliskan pekerjaanmu  (opsional)"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input type="text" [(ngModel)]="hobi" label=" Hobi " labelPlacement="floating"
+            placeholder="Yuk kasih tau hobi kamu, maksimal 50 karakter (opsional)" maxlength="50"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-textarea [(ngModel)]="biografi" label=" Biografi " labelPlacement="floating"
+            placeholder="Silahkan ceritakan sedikit tentang kamu, maksimal 500 karakter."
+            maxlength="500"></ion-textarea>
+        </ion-item>
+        <ion-item>
+          <ion-input type="text" [(ngModel)]="judul_podcast" label=" Judul Episode Podcast " labelPlacement="floating"
+            placeholder="Masukkan judul episode podcast yang ingin kamu kirimkan" required="true"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-textarea [(ngModel)]="deskripsi_podcast" label=" Deskripsi Podcast " labelPlacement="floating"
+            placeholder="Silahkan isi deskripsi episode podcast yang kamu kirim, maksimal 500 karakter" required="true"
+            maxlength="500"></ion-textarea>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Segmen Podcast</ion-label>
+          <ion-select [(ngModel)]="segmen_podcast" label=" Segmen Podcast " labelPlacement="floating"
+            class="popover-content" placeholder="Pilih segmen podcast" (ionChange)="showTextBox()" required="true">
+            <ion-select-option value="Podcast Teknologi">Podcast Teknologi</ion-select-option>
+            <ion-select-option value="Podcast Gaming">Podcast Gaming</ion-select-option>
+            <ion-select-option value="Sharing Time">Sharing Time</ion-select-option>
+            <ion-select-option value="Ngoprek Server">Ngoprek Server</ion-select-option>
+            <ion-select-option value="Reaper Basic">Reaper Basic</ion-select-option>
+            <ion-select-option value="Buat Segmen Baru">Buat Segmen Baru</ion-select-option>
+          </ion-select>
+        </ion-item>
+        <div id="textboxDiv" *ngIf="showTextBoxFlag">
+          <ion-item>
+            <ion-input type="text" [(ngModel)]="segmen_baru" (ngModelChange)="segmen_podcast = segmen_baru"
+              label=" Buat Segmen Baru " labelPlacement="floating"
+              placeholder="Silahkan masukkan nama segmen yang Anda inginkan" required="true"></ion-input>
+          </ion-item>
+        </div>
+        <ion-item>
+          <ion-input type="url" [(ngModel)]="url_file" label="URL File" labelPlacement="floating"
+            placeholder="Masukkan URL file rekaman audio/video punyamu, yang telah di-upload ke dropbox atau cloud storage lainnya"
+            required="true"></ion-input>
+        </ion-item>
+      </ion-list>
+      <div padding>
+        <ion-button expand="block" color="primary" size="medium" (click)="addForm()">
+          <ion-icon name="checkmark-circle-outline"></ion-icon> Submit
+        </ion-button>
+      </div>
+    </ion-card-content>
+  </ion-card>
 </ion-content>

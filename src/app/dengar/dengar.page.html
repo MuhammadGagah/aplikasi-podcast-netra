@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Dengarkan Podcast Netra</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngFor="let item of rssData">
+    <ion-card-header>
+      <ion-card-title>{{ item.title }}</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content [innerHTML]="item.description"></ion-card-content>
+
+    <ion-button (click)="playPodcast(item.link)">Play Podcast</ion-button>
+  </ion-card>
+</ion-content>

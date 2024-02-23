@@ -1,17 +1,53 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <ion-title>
-      Tab 3
-    </ion-title>
+    <ion-title>Data Formulir Host Podcast Netra</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button>Kembali</ion-back-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 3</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content>
+  <h1>Data Host</h1>
+  <p>Berikut adalah data yang telah mengisi submission form podcast netra:</p>
 
-  <app-explore-container name="Tab 3 page"></app-explore-container>
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content pullingIcon="arrow-dropdown" pullingText="Tarik untuk memperbarui"
+      refreshingSpinner="circles" refreshingText="Memperbarui...">
+    </ion-refresher-content>
+  </ion-refresher>
+
+  <ion-card *ngFor="let host of data_host">
+    <ion-card-header>
+      <ion-card-subtitle>Host ID: {{host.host_id}}, Status Podcast: {{host.status}}</ion-card-subtitle>
+      <ion-card-title>Nama: {{host.nama}}</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      No.Hp: {{host.nohp}},
+      Tanggal Lahir: {{host.tgl_lahir}},
+      Jenis Kelamin: {{host.jenis_kelamin}},
+      Pekerjaan: {{host.pekerjaan}},
+      Hobi: {{host.hobi}},
+      Biografi: {{host.biografi}}.
+      <br>
+      <strong>Podcast Information:</strong>
+      <ul>
+        <li>Judul Episode: {{host.judul_podcast}}</li>
+        <li>Deskripsi Episode: {{host.deskripsi_podcast}}</li>
+        <li>Segmen Podcast: {{host.segmen_podcast}}</li>
+      </ul>
+      <strong>File and Podcast URLs:</strong>
+      <ul>
+        <li>URL File: {{host.url_file}}</li>
+        <li>URL Podcast: {{host.url_podcast}}</li>
+      </ul>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-infinite-scroll (ionInfinite)="loadData($event)">
+    <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="Memuat data lebih banyak...">
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+
 </ion-content>
