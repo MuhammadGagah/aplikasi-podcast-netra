@@ -5,8 +5,7 @@ import { map } from 'rxjs/operators';
 
 @Injectable()
 export class PostProvider {
-  //server: string = 'https://tis1.itbi.ac.id/api/';
-  server: string = 'https://mgagah.my.id/db_form/';
+  server: string = 'https://localhost/db_form/';
 
   constructor(public http: HttpClient) {}
 

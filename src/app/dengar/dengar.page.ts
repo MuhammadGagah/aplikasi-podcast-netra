@@ -22,7 +22,7 @@ export class DengarPage implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.loadRssFeed('https://anchor.fm/s/1290b87c/podcast/rss');
+    this.loadRssFeed('https://localhost/rss');
   }
 
   loadRssFeed(url: string) {

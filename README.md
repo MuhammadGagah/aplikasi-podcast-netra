@@ -1,8 +1,9 @@
-# Web Sekolah Dengan PHP & MySQL
+# Aplikasi Podcast Netra, menembus batas, ciptakan kreatifitas
 
 ### Aplikasi podcast netra, dibuat dengan framework ionic versi 7
 
-Jadi, saya mempunyai podcast dari spotify for podcaster, dan saya buat aplikasi ini agar lebih mudah untuk memonitor, atau mempermudah saya dalam melakukan seleksi bagi yang mau ikut berkontribusi cuap-cuap di podcast netra
+Jadi, saya mempunyai podcast dari spotify for podcaster, dan saya buat aplikasi ini agar lebih mudah untuk memonitor, atau mempermudah saya dalam menyeleksi
+para pendengar podcast yang ingin ikut berkontribusi cuap-cuap di podcast netra
 
 ### Aplikasi ini dibuat menggunakan apa saja?
 
@@ -27,8 +28,14 @@ Untuk fiturnya masih sangat sederhana, contohnya sebagai berikut
 ### Jika ingin mengembangkan aplikasi ini bagaimana caranya?
 
 1. silahkan lakukan git clone.
-2. buat database podcast_netra, dan import database yang ditelah disediakan di web admin.
-3. login menggunakan user dan password admin
+2. Download dan install node.js, jika belum punya.
+3. masuk ke direktori hasil git clone via terminal, dan jalankan npm install
+4. buat database podcast_netra, dan import database yang ditelah disediakan di web admin. Web admin akan di-upload segera.
+5. copy folder db_form ke folder xampp/htdocs jika menggunakan OS Windows.
+6. Sesuaikan host serta user dan password database pada file db_config.php yang terdapat pada folder db_form.
+7. Edit dan sesuaikan host db_form pada file post-provider.ts yang terdapat pada direktori /aplikasi-podcast-netra/src/providers.
+8. Test aplikasi menggunakan command ionic serve.
+   Selamat mencoba!
 
 ### Tentang Saya
 
