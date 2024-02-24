@@ -20,7 +20,7 @@ Untuk fiturnya masih sangat sederhana, contohnya sebagai berikut
 
 ### Bagaimana cara menggunakan aplikasi ini?
 
-1. Download dan install aplikasi podcast netra dari sini.
+1. Download dan install aplikasi podcast netra dari [sini.](https://github.com/MuhammadGagah/aplikasi-podcast-netra/releases/download/1.1/app-podcastNetra.apk)
 2. Install pada device android yang digunakan.
 3. Buka aplikasi podcast netra yang telah di-install, dan akan diarahkan ke halaman petunjuk
 4. Selanjutnya silahkan ikuti arahan yang tersedia di layar hp kamu...
