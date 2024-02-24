@@ -2,8 +2,8 @@
 
 ### Aplikasi podcast netra, dibuat dengan framework ionic versi 7
 
-Jadi, saya mempunyai podcast dari spotify for podcaster, dan saya buat aplikasi ini agar lebih mudah untuk memonitor, atau mempermudah saya dalam menyeleksi
-para pendengar podcast yang ingin ikut berkontribusi cuap-cuap di podcast netra
+Jadi, saya mempunyai [https://podcasters.spotify.com/pod/show/muhammad-gagah](Podcast Netra) dari spotify for podcaster, dan saya buat aplikasi ini agar lebih mudah untuk memonitor, atau mempermudah saya dalam menyeleksi
+para pendengar podcast yang ingin ikut berkontribusi cuap-cuap di [https://podcasters.spotify.com/pod/show/muhammad-gagah](podcast netra)
 
 ### Aplikasi ini dibuat menggunakan apa saja?
 
